@@ -10,7 +10,7 @@
 <body>
     <div class="main">
         <h2>Sign up Form</h2>
-    <form action="get">
+    <form action="">
         <input id = "firstName" type="text" placeholder="First Name">
         <input id = "laststName" type="text" placeholder="Last Name">
         <br>
@@ -20,8 +20,11 @@
         <label for="dob">Date of Birth: </label>
         <input id = "dob" type="date" placeholder="Date of Birth">
         <br>
-        <button>Sign up</button>
+        <button onclick="signUp()">Sign up</button>
     </form>
+    <div>
+        <p id="detail"></p>
+    </div>
 </div>
 </body>
 <script src="app.js"></script>
