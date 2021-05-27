@@ -18,10 +18,11 @@ function hide(){
     para.innerHTML = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis enim omnis consectetur ut maxime <a href='#' onclick='expand()'>see more</a>"
 }
 
+
 function insertRecord(){
-  var i = 0;
+  // console.log();
   var table = document.getElementById("myTable").getElementsByTagName("tbody")[0];
-   var row = table.insertRow(i);
+   var row = table.insertRow();
    var rollNumber = row.insertCell(0);
    var name = row.insertCell(1);
    var email = row.insertCell(2);
@@ -33,5 +34,12 @@ function insertRecord(){
    rollNumber.innerHTML = document.getElementById("rollno").value;
    email.innerHTML = document.getElementById("stdEmail").value;
    grade.innerHTML = document.getElementById("grade").value;
-  i++;
+   edit.innerHTML = "<button onclick = 'editRecord(this)'>Edit</button>";
+   deleteRecord.innerHTML = "<button onclick = 'deleteRecord(this)'>Delete</button>";
+
+}
+
+function deleteRecord(x){
+  var ind = x.parentNode.parentNode.rowIndex;
+   document.getElementById("myTable").deleteRow(ind);
 }
