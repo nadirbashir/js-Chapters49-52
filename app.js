@@ -36,10 +36,23 @@ function insertRecord(){
    grade.innerHTML = document.getElementById("grade").value;
    edit.innerHTML = "<button onclick = 'editRecord(this)'>Edit</button>";
    deleteRecord.innerHTML = "<button onclick = 'deleteRecord(this)'>Delete</button>";
-
 }
-
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 function deleteRecord(x){
   var ind = x.parentNode.parentNode.rowIndex;
    document.getElementById("myTable").deleteRow(ind);
+}
+
+function editRecord(){
+  modal.style.display = 'block';
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// when user click anywhere windows will close
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
