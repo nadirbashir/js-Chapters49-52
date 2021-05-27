@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <h2>Sign up Form</h2>
-     
-        <input id = "firstName" type="text" placeholder="First Name">
-        <input id = "lastName" type="text" placeholder="Last Name">
-        <br>
-        <input id = "email" type= "email" placeholder="Email">
-        <input id = "phone" type= "tel" placeholder="Phone">
-        <br>
-        <label for="dob">Date of Birth: </label>
-        <input id = "dob" type="date" placeholder="Date of Birth">
-        <br>
-        <button class="btn" onclick="signUp()">Sign up</button>
-    
-        <p id = "para"></p>
+      <h2>Sign up Form</h2>
 
-        <p id = "detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis enim omnis consectetur ut maxime <a href="#" onclick="expand()">see more</a></p>
-        
-        <div id="section2">
-            <h2>Student Record Table</h2>
-        <input id = "stdName" type="text" name="name" placeholder="Enter Name">
-        <input id = "rollno" type="text" name="rollno" placeholder="Enter Number">
-        <input id = "grade" type="text" name="class" placeholder="Enter Class">
-        <input id = "stdEmail" type="email" name="email" placeholder="Enter Email">
+      <input id="firstName" type="text" placeholder="First Name" />
+      <input id="lastName" type="text" placeholder="Last Name" />
+      <br />
+      <input id="email" type="email" placeholder="Email" />
+      <input id="phone" type="tel" placeholder="Phone" />
+      <br />
+      <label for="dob">Date of Birth: </label>
+      <input id="dob" type="date" placeholder="Date of Birth" />
+      <br />
+      <button class="btn" onclick="signUp()">Sign up</button>
+
+      <p id="para"></p>
+
+      <p id="detail">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+        enim omnis consectetur ut maxime
+        <a href="#" onclick="expand()">see more</a>
+      </p>
+
+      <div id="section2">
+        <h2>Student Record Table</h2>
+        <input id="stdName" type="text" name="name" placeholder="Enter Name" />
+        <input
+          id="rollno"
+          type="text"
+          name="rollno"
+          placeholder="Enter Number"
+        />
+        <input id="grade" type="text" name="class" placeholder="Enter Class" />
+        <input
+          id="stdEmail"
+          type="email"
+          name="email"
+          placeholder="Enter Email"
+        />
         <button class="btn" onclick="insertRecord()">Insert Data</button>
         <table id="myTable" class="table">
-            <tbody>
-                
-            </tbody>
+          <tbody></tbody>
         </table>
-    </div>
-    <!------Modal Html-->
-    <div id="myModal" class="modal">
+      </div>
+      <!------Modal Html-->
+      <div id="myModal" class="modal">
         <div class="modal-content">
             <span id="close" class="close">&times;</span>
+            <h2>Update Row</h2>
+          <br>
+            <input
+              id="stdName"
+              type="text"
+              name="name"
+              placeholder="Enter Name"
+            />
+            <input
+              id="rollno"
+              type="text"
+              name="rollno"
+              placeholder="Enter Number"
+            />
+            <input
+              id="grade"
+              type="text"
+              name="class"
+              placeholder="Enter Class"
+            />
+            <input
+              id="stdEmail"
+              type="email"
+              name="email"
+              placeholder="Enter Email"
+            />
+            <button class="btn" onclick="updateRecord()">Update Record</button>
+          
         </div>
+      </div>
     </div>
-</div>
-</body>
-<script src="app.js"></script>
+  </body>
+  <script src="app.js"></script>
 </html>

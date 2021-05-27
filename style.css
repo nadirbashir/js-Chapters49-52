@@ -10,7 +10,7 @@ input{
 .btn{
     width: 200px;
     height: 40px;
-    margin-left: 200px;
+    margin: 0 auto;
     border: none;
     border-radius: 5px;
     color: white;
@@ -21,7 +21,6 @@ label{
 }
 h2{
     text-align: center;
-    margin: 0 auto;
     color: rgb(110, 153, 170);
 }
 
@@ -42,13 +41,15 @@ h2{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content{
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 3px;
     background-color: #fefefe;
 }
 .close{
+    float: right;
     color: #aaaaaa;
     font-size: 28px;
     font-weight: bold;
