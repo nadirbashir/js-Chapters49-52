@@ -20,6 +20,10 @@ function hide(){
 
 
 var table = document.getElementById("myTable").getElementsByTagName("tbody")[0];
+var stdName = document.getElementById("stdName");
+var rollno = document.getElementById("rollno");
+var stdEmail = document.getElementById("stdEmail");
+var stdgrade = document.getElementById("grade");
 function insertRecord(){
   // console.log();
    var row = table.insertRow();
@@ -29,12 +33,18 @@ function insertRecord(){
    var grade = row.insertCell(3);
    var edit = row.insertCell(4);
    var deleteRecord = row.insertCell(5);  
-   name.innerHTML = document.getElementById("stdName").value;
-   rollNumber.innerHTML = document.getElementById("rollno").value;
-   email.innerHTML = document.getElementById("stdEmail").value;
-   grade.innerHTML = document.getElementById("grade").value;
+   name.innerHTML = stdName.value;
+   rollNumber.innerHTML = rollno.value;
+   email.innerHTML = stdEmail.value;
+   grade.innerHTML = stdgrade.value;
    edit.innerHTML = "<button onclick = 'editRecord(this)'>Edit</button>";
    deleteRecord.innerHTML = "<button onclick = 'deleteRecord(this)'>Delete</button>";
+
+   stdName.value = "";
+   rollno.value = "";
+   stdEmail.value = "";
+   stdgrade.value = "";
+
 }
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
@@ -43,8 +53,12 @@ function deleteRecord(x){
    document.getElementById("myTable").deleteRow(ind);
 }
 
-function editRecord(){
+function editRecord(x){
   modal.style.display = 'block';
+  document.getElementById("updateRollno").value = x.parentNode.parentNode.cells[0].innerHTML;
+  document.getElementById("updateName").value = x.parentNode.parentNode.cells[1].innerHTML;
+  document.getElementById("updateEmail").value = x.parentNode.parentNode.cells[2].innerHTML;
+  document.getElementById("updateGrade").value = x.parentNode.parentNode.cells[3].innerHTML;
 
 }
 span.onclick = function() {
